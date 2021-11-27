@@ -1,0 +1,80 @@
+export const PROFILES = [
+    {
+        id: 6,
+        firstName: "Basil",
+        lastName: "Karlo",
+        gender: "male",
+        image: "/components/images/basilkarlo.jpg",
+        featured: false,
+        description: "The formula must have soaked every cell in my body.",
+        zodiac: "Capricorn",
+        match: "Virgo",
+        email: "bkarlo@gmail.com",
+        elementType: "earth"
+    },
+    {
+        id: 7,
+        firstName: "Toph",
+        lastName: "Beifong",
+        gender: "female",
+        image: "/components/images/tophbeifong.jpg",
+        featured: false,
+        description: "You’ve seen nothing once, you’ve seen it a thousand times.",
+        zodiac: "Taurus",
+        match: "Pisces",
+        email: "tbeifong@gmail.com",
+        elementType: "earth"
+    },
+    {
+        id: 8,
+        firstName: "San",
+        lastName: "Wolf",
+        gender: "female",
+        image: "/components/images/sanwolf.jpg",
+        featured: false,
+        description: "I can deal with forest Gods, it's humans I'm worried about… Remember you can't trust men.",
+        zodiac: "Virgo",
+        match: "Capricorn",
+        emai: "swolf@hotmail.com",
+        elementType: "earth"
+    },
+    {
+        id: 9,
+        firstName:"Prince",
+        lastName: "Zuko",
+        gender: "male",
+        image: "/components/images/princezuko.jpg",
+        featured: true,
+        description: "Why am I so bad at being good?",
+        zodiac: "Leo",
+        match: "Libra",
+        email: "pzuko@outlook.com",
+        elementType: "fire"
+    },
+    {
+        id: 10,
+        firstName: "Rei",
+        lastName: "Hino",
+        gender: "female",
+        image: "/components/images/reihino.jpg",
+        featured: false,
+        description: "That's right. There's no time to cry over boys",
+        zodiac: "Aries",
+        match: "Aquarius",
+        email: "rhino@yahoo.com",
+        elementType: "fire"
+    },
+    {
+        id: 11,
+        firstName: "Enji",
+        lastName:"Todoroki",
+        gender: "male",
+        image: "/components/images/enjitodoroki.jpg",
+        featured: true,
+        description: "It's not your fault, we're just playing on different levels.",
+        zodiac: "Sagittarius",
+        match: "Cancer",
+        email: "etodoroki@live.com",
+        elementType: "fire"
+    }
+]

@@ -1,54 +1,42 @@
 import React, { Component } from 'react';
-import Home from './HomeComponent';
+import ProfileDirectory from './ProfileDirectoryComponent';
+import ProfileInfo from './ProfileInfoComponent';
+import Constants from 'expo-constants';
+import { View, Platform } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
-import { createDrawerNavigator } from 'react-navigation-drawer';
 import { createAppContainer } from 'react-navigation';
 
 
-const HomeNavigator = createStackNavigator(
+const ProfileDirectoryNavigator = createStackNavigator(
     {
-        Home: {screen: Home}
-    },
+        ProfileDirectory: { screen: ProfileDirectory },
+        ProfileInfo: { screen: ProfileInfo }
+    }, 
     {
-        initialRouteName:'Home',
+        initialRouteName: 'ProfileDirectory',
         defaultNavigationOptions: {
             headerStyle: {
-                backgroundColor:'#000026'
+                backgroundColor: '#5637DD'
             },
             headerTintColor: '#fff',
-            headerTitleColor: {
-                color:'#DFFF00'
+            headerTitleStyle: {
+                color: '#fff'
             }
         }
     }
-)
-
-const MainNavigator = createDrawerNavigator(
-    {
-        Home: { screen: HomeNavigator },
-    },
-    {
-        drawerBackgroundColor: '#fff'
-    }
 );
 
-
-
-const AppNavigator = createAppContainer(MainNavigator);
+const AppNavigator = createAppContainer(ProfileDirectoryNavigator);
 
 class Main extends Component {
-  
-    
     render() {
         return (
-            <View 
+            <View
                 style={{
                     flex: 1,
                     paddingTop: Platform.OS === 'ios' ? 0 : Constants.statusBarHeight
-                
-                }}
-            >
-               <AppNavigator />
+            }}>
+                <AppNavigator />
             </View>
         );
     }
