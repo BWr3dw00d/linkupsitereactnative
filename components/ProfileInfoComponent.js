@@ -35,7 +35,7 @@ class ProfileInfo extends Component {
     render() {
         const profileId = this.props.navigation.getParam('profileId');
         const profile = this.state.profiles.filter(profile => profile.id === profileId)[0];
-        return <RenderCampsite profile={profile} />;
+        return <RenderProfile profile={profile} />;
     }
 }
 

@@ -23,8 +23,8 @@ class ProfileDirectory extends Component {
                     <ListItem
                         title={item.name}
                         subtitle={item.description}
-                        onPress={() => navigate('ProfileInfo', { profileId: item.id })}
-                        leftAvatar={{ source: require('./images/basilkarlo.jpg')}}
+                        onPress={() => navigate('Profile Info', { profileId: item.id })}
+                        leftAvatar={item.image}
                     />
                 );
             };

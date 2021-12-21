@@ -4,7 +4,9 @@ import ProfileInfo from './ProfileInfoComponent';
 import Constants from 'expo-constants';
 import { View, Platform } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
+import { createDrawerNavigator } from 'react-navigation-drawer';
 import { createAppContainer } from 'react-navigation';
+import LinkupHome from './LinkupHomeComponent';
 
 
 const ProfileDirectoryNavigator = createStackNavigator(
@@ -26,7 +28,34 @@ const ProfileDirectoryNavigator = createStackNavigator(
     }
 );
 
-const AppNavigator = createAppContainer(ProfileDirectoryNavigator);
+const LinkupHomeNavigator = createStackNavigator(
+    {
+        LinkupHome: { screen: LinkupHome }
+    },
+    {
+        defaultNavigationOptions: {
+            headerStyle: {
+                backgroundColor: '#5637DD'
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+                color: '#fff'
+            }
+        }
+    }
+);
+
+const MainNavigator = createDrawerNavigator(
+    {
+        Home: { screen: LinkupHomeNavigator },
+        ProfileDirectory: { screen: ProfileDirectoryNavigator }
+    },
+    {
+        drawerBackgroundColor: '#CEC8FF'
+    }
+);
+
+const AppNavigator = createAppContainer(MainNavigator);
 
 class Main extends Component {
     render() {
